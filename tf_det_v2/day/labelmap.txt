@@ -1,0 +1,13 @@
+car
+bike
+truck
+bus
+taxi
+pickup
+trailer
+ambulance
+tuktuk
+van
+person
+cone
+barrier
