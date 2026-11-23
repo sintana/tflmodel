@@ -1,0 +1,2 @@
+﻿[2026-11-23 08:52:58] tf_net_v14_night: s1 night val (enixma) by step 20k 0.397 · 30k 0.414 · 40k 0.422 -> step 40000
+[2026-11-23 08:59:34] tf_net_v14_night: s1 night test switch mAP50 · APZ 0.574 · enixma all · tf_net_v14_night 0.495 · enixma all · parent tf_net_v13_night 0.427 · enixma unseen · tf_net_v14_night 0.492 · enixma unseen · parent tf_net_v13_night 0.42 · parent tf_net_v13_night · APZ 0.521

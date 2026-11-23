@@ -1,0 +1,290 @@
+319 images · GT 1147 boxes · conf>0.25 · frames: {'night': 319} · ignored GT 364 (outside the zone) · < 10px at the 300x300 input ignored: 269 · zones: 1370 keys (zoom 1.18-1.82x) · approved zones zones_eval.json: skipped 58 images of cameras without one
+max detections 20 · switch model: all 20 slots > conf 0.25 on 9/319 images · images with > 20 GT boxes: 0
+
+== day model
+cls              GT    pred     AP50
+car             467     662   0.772 
+bike            157     276   0.838~
+truck            59      74   0.560~
+bus              54      89   0.704~
+taxi             77      73   0.606~
+pickup          171     202   0.618~
+trailer          59      82   0.689~
+ambulance        11       9   0.697~
+tuktuk           39      68   0.807~
+van              53      35   0.493~
+mAP50 0.678  (10 classes) · recall (class-aware) 80%
+
+== night model
+cls              GT    pred     AP50
+car             467     662   0.772 
+bike            157     276   0.838~
+truck            59      74   0.560~
+bus              54      89   0.704~
+taxi             77      73   0.606~
+pickup          171     202   0.618~
+trailer          59      82   0.689~
+ambulance        11       9   0.697~
+tuktuk           39      68   0.807~
+van              53      35   0.493~
+mAP50 0.678  (10 classes) · recall (class-aware) 80%
+
+== day/night switch (by hour)
+cls              GT    pred     AP50
+car             467     662   0.772 
+bike            157     276   0.838~
+truck            59      74   0.560~
+bus              54      89   0.704~
+taxi             77      73   0.606~
+pickup          171     202   0.618~
+trailer          59      82   0.689~
+ambulance        11       9   0.697~
+tuktuk           39      68   0.807~
+van              53      35   0.493~
+mAP50 0.678  (10 classes) · recall (class-aware) 80%
+
+### enixma all · tf_det_v14_night
+input center (enixma: centred crop with the model aspect, then resize) · GT outside the enixma crop ignored: 47
+377 images · GT 1647 boxes · conf>0.01 · frames: {'night': 377} · ignored GT 47 ()
+max detections 20 · switch model: all 20 slots > conf 0.01 on 377/377 images · images with > 20 GT boxes: 5
+
+== day model
+cls              GT    pred     AP50   P@0.20  R@0.20
+car             592    1824   0.649     0.578   0.747
+bike            423    1577   0.413     0.545   0.456
+truck            66     693   0.583~    0.380   0.697
+bus              60    1084   0.634~    0.265   0.800
+taxi             80     280   0.533~    0.657   0.575
+pickup          246    1088   0.569~    0.480   0.630
+trailer          64     593   0.684~    0.580   0.734
+ambulance        11      43   0.242~    0.500   0.364
+tuktuk           46     200   0.635~    0.432   0.696
+van              59     158   0.489~    0.700   0.475
+mAP50 0.543  (10 classes) · recall (class-aware) 66%
+at conf > 0.20 (all classes pooled): precision 0.516 · recall 0.632 · TP 1041 · FP 976 · GT 1647
+
+== night model
+cls              GT    pred     AP50   P@0.20  R@0.20
+car             592    1824   0.649     0.578   0.747
+bike            423    1577   0.413     0.545   0.456
+truck            66     693   0.583~    0.380   0.697
+bus              60    1084   0.634~    0.265   0.800
+taxi             80     280   0.533~    0.657   0.575
+pickup          246    1088   0.569~    0.480   0.630
+trailer          64     593   0.684~    0.580   0.734
+ambulance        11      43   0.242~    0.500   0.364
+tuktuk           46     200   0.635~    0.432   0.696
+van              59     158   0.489~    0.700   0.475
+mAP50 0.543  (10 classes) · recall (class-aware) 66%
+at conf > 0.20 (all classes pooled): precision 0.516 · recall 0.632 · TP 1041 · FP 976 · GT 1647
+
+== day/night switch (by hour)
+cls              GT    pred     AP50   P@0.20  R@0.20
+car             592    1824   0.649     0.578   0.747
+bike            423    1577   0.413     0.545   0.456
+truck            66     693   0.583~    0.380   0.697
+bus              60    1084   0.634~    0.265   0.800
+taxi             80     280   0.533~    0.657   0.575
+pickup          246    1088   0.569~    0.480   0.630
+trailer          64     593   0.684~    0.580   0.734
+ambulance        11      43   0.242~    0.500   0.364
+tuktuk           46     200   0.635~    0.432   0.696
+van              59     158   0.489~    0.700   0.475
+mAP50 0.543  (10 classes) · recall (class-aware) 66%
+at conf > 0.20 (all classes pooled): precision 0.516 · recall 0.632 · TP 1041 · FP 976 · GT 1647
+
+### enixma all · parent tf_det_v13_night
+input center (enixma: centred crop with the model aspect, then resize) · GT outside the enixma crop ignored: 47
+377 images · GT 1647 boxes · conf>0.01 · frames: {'night': 377} · ignored GT 47 ()
+max detections 20 · switch model: all 20 slots > conf 0.01 on 377/377 images · images with > 20 GT boxes: 5
+
+== day model
+cls              GT    pred     AP50   P@0.20  R@0.20
+car             592    1914   0.637     0.598   0.747
+bike            423    1805   0.394     0.493   0.440
+truck            66     664   0.547~    0.363   0.682
+bus              60     641   0.592~    0.350   0.683
+taxi             80     258   0.488~    0.646   0.525
+pickup          246    1207   0.576~    0.449   0.646
+trailer          64     598   0.626~    0.606   0.672
+ambulance        11      72   0.227~    0.500   0.273
+tuktuk           46     155   0.600~    0.528   0.609
+van              59     226   0.483~    0.604   0.492
+mAP50 0.517  (10 classes) · recall (class-aware) 64%
+at conf > 0.20 (all classes pooled): precision 0.521 · recall 0.618 · TP 1018 · FP 936 · GT 1647
+
+== night model
+cls              GT    pred     AP50   P@0.20  R@0.20
+car             592    1914   0.637     0.598   0.747
+bike            423    1805   0.394     0.493   0.440
+truck            66     664   0.547~    0.363   0.682
+bus              60     641   0.592~    0.350   0.683
+taxi             80     258   0.488~    0.646   0.525
+pickup          246    1207   0.576~    0.449   0.646
+trailer          64     598   0.626~    0.606   0.672
+ambulance        11      72   0.227~    0.500   0.273
+tuktuk           46     155   0.600~    0.528   0.609
+van              59     226   0.483~    0.604   0.492
+mAP50 0.517  (10 classes) · recall (class-aware) 64%
+at conf > 0.20 (all classes pooled): precision 0.521 · recall 0.618 · TP 1018 · FP 936 · GT 1647
+
+== day/night switch (by hour)
+cls              GT    pred     AP50   P@0.20  R@0.20
+car             592    1914   0.637     0.598   0.747
+bike            423    1805   0.394     0.493   0.440
+truck            66     664   0.547~    0.363   0.682
+bus              60     641   0.592~    0.350   0.683
+taxi             80     258   0.488~    0.646   0.525
+pickup          246    1207   0.576~    0.449   0.646
+trailer          64     598   0.626~    0.606   0.672
+ambulance        11      72   0.227~    0.500   0.273
+tuktuk           46     155   0.600~    0.528   0.609
+van              59     226   0.483~    0.604   0.492
+mAP50 0.517  (10 classes) · recall (class-aware) 64%
+at conf > 0.20 (all classes pooled): precision 0.521 · recall 0.618 · TP 1018 · FP 936 · GT 1647
+
+### enixma unseen · tf_det_v14_night
+input center (enixma: centred crop with the model aspect, then resize) · GT outside the enixma crop ignored: 34
+285 images · GT 1162 boxes · conf>0.01 · frames: {'night': 285} · ignored GT 34 ()
+max detections 20 · switch model: all 20 slots > conf 0.01 on 285/285 images · images with > 20 GT boxes: 1
+
+== day model
+cls              GT    pred     AP50   P@0.20  R@0.20
+car             389    1296   0.632     0.562   0.735
+bike            305    1155   0.370     0.531   0.423
+truck            46     567   0.514~    0.333   0.652
+bus              44     878   0.655~    0.285   0.841
+taxi             57     223   0.540~    0.660   0.579
+pickup          172     776   0.493~    0.463   0.552
+trailer          53     470   0.618~    0.600   0.679
+ambulance         7      33   0.321~    0.750   0.429
+tuktuk           42     172   0.667~    0.492   0.714
+van              47     130   0.514~    0.742   0.489
+mAP50 0.532  (10 classes) · recall (class-aware) 63%
+at conf > 0.20 (all classes pooled): precision 0.508 · recall 0.604 · TP 702 · FP 681 · GT 1162
+
+== night model
+cls              GT    pred     AP50   P@0.20  R@0.20
+car             389    1296   0.632     0.562   0.735
+bike            305    1155   0.370     0.531   0.423
+truck            46     567   0.514~    0.333   0.652
+bus              44     878   0.655~    0.285   0.841
+taxi             57     223   0.540~    0.660   0.579
+pickup          172     776   0.493~    0.463   0.552
+trailer          53     470   0.618~    0.600   0.679
+ambulance         7      33   0.321~    0.750   0.429
+tuktuk           42     172   0.667~    0.492   0.714
+van              47     130   0.514~    0.742   0.489
+mAP50 0.532  (10 classes) · recall (class-aware) 63%
+at conf > 0.20 (all classes pooled): precision 0.508 · recall 0.604 · TP 702 · FP 681 · GT 1162
+
+== day/night switch (by hour)
+cls              GT    pred     AP50   P@0.20  R@0.20
+car             389    1296   0.632     0.562   0.735
+bike            305    1155   0.370     0.531   0.423
+truck            46     567   0.514~    0.333   0.652
+bus              44     878   0.655~    0.285   0.841
+taxi             57     223   0.540~    0.660   0.579
+pickup          172     776   0.493~    0.463   0.552
+trailer          53     470   0.618~    0.600   0.679
+ambulance         7      33   0.321~    0.750   0.429
+tuktuk           42     172   0.667~    0.492   0.714
+van              47     130   0.514~    0.742   0.489
+mAP50 0.532  (10 classes) · recall (class-aware) 63%
+at conf > 0.20 (all classes pooled): precision 0.508 · recall 0.604 · TP 702 · FP 681 · GT 1162
+
+### enixma unseen · parent tf_det_v13_night
+input center (enixma: centred crop with the model aspect, then resize) · GT outside the enixma crop ignored: 34
+285 images · GT 1162 boxes · conf>0.01 · frames: {'night': 285} · ignored GT 34 ()
+max detections 20 · switch model: all 20 slots > conf 0.01 on 285/285 images · images with > 20 GT boxes: 1
+
+== day model
+cls              GT    pred     AP50   P@0.20  R@0.20
+car             389    1401   0.609     0.578   0.725
+bike            305    1316   0.355     0.484   0.407
+truck            46     544   0.469~    0.299   0.630
+bus              44     525   0.600~    0.353   0.682
+taxi             57     205   0.509~    0.646   0.544
+pickup          172     877   0.491~    0.422   0.564
+trailer          53     450   0.570~    0.589   0.623
+ambulance         7      58   0.200~    0.400   0.286
+tuktuk           42     133   0.639~    0.600   0.643
+van              47     191   0.461~    0.579   0.468
+mAP50 0.490  (10 classes) · recall (class-aware) 61%
+at conf > 0.20 (all classes pooled): precision 0.502 · recall 0.583 · TP 677 · FP 671 · GT 1162
+
+== night model
+cls              GT    pred     AP50   P@0.20  R@0.20
+car             389    1401   0.609     0.578   0.725
+bike            305    1316   0.355     0.484   0.407
+truck            46     544   0.469~    0.299   0.630
+bus              44     525   0.600~    0.353   0.682
+taxi             57     205   0.509~    0.646   0.544
+pickup          172     877   0.491~    0.422   0.564
+trailer          53     450   0.570~    0.589   0.623
+ambulance         7      58   0.200~    0.400   0.286
+tuktuk           42     133   0.639~    0.600   0.643
+van              47     191   0.461~    0.579   0.468
+mAP50 0.490  (10 classes) · recall (class-aware) 61%
+at conf > 0.20 (all classes pooled): precision 0.502 · recall 0.583 · TP 677 · FP 671 · GT 1162
+
+== day/night switch (by hour)
+cls              GT    pred     AP50   P@0.20  R@0.20
+car             389    1401   0.609     0.578   0.725
+bike            305    1316   0.355     0.484   0.407
+truck            46     544   0.469~    0.299   0.630
+bus              44     525   0.600~    0.353   0.682
+taxi             57     205   0.509~    0.646   0.544
+pickup          172     877   0.491~    0.422   0.564
+trailer          53     450   0.570~    0.589   0.623
+ambulance         7      58   0.200~    0.400   0.286
+tuktuk           42     133   0.639~    0.600   0.643
+van              47     191   0.461~    0.579   0.468
+mAP50 0.490  (10 classes) · recall (class-aware) 61%
+at conf > 0.20 (all classes pooled): precision 0.502 · recall 0.583 · TP 677 · FP 671 · GT 1162
+
+### parent tf_det_v13_night · APZ
+319 images · GT 1147 boxes · conf>0.25 · frames: {'night': 319} · ignored GT 364 (outside the zone) · < 10px at the 300x300 input ignored: 269 · zones: 1370 keys (zoom 1.18-1.82x) · approved zones zones_eval.json: skipped 58 images of cameras without one
+max detections 20 · switch model: all 20 slots > conf 0.25 on 9/319 images · images with > 20 GT boxes: 0
+
+== day model
+cls              GT    pred     AP50
+car             467     654   0.764 
+bike            157     260   0.812~
+truck            59      79   0.558~
+bus              54      60   0.663~
+taxi             77      71   0.566~
+pickup          171     192   0.570~
+trailer          59      61   0.564~
+ambulance        11       9   0.508~
+tuktuk           39      51   0.732~
+van              53      34   0.473~
+mAP50 0.621  (10 classes) · recall (class-aware) 78%
+
+== night model
+cls              GT    pred     AP50
+car             467     654   0.764 
+bike            157     260   0.812~
+truck            59      79   0.558~
+bus              54      60   0.663~
+taxi             77      71   0.566~
+pickup          171     192   0.570~
+trailer          59      61   0.564~
+ambulance        11       9   0.508~
+tuktuk           39      51   0.732~
+van              53      34   0.473~
+mAP50 0.621  (10 classes) · recall (class-aware) 78%
+
+== day/night switch (by hour)
+cls              GT    pred     AP50
+car             467     654   0.764 
+bike            157     260   0.812~
+truck            59      79   0.558~
+bus              54      60   0.663~
+taxi             77      71   0.566~
+pickup          171     192   0.570~
+trailer          59      61   0.564~
+ambulance        11       9   0.508~
+tuktuk           39      51   0.732~
+van              53      34   0.473~
+mAP50 0.621  (10 classes) · recall (class-aware) 78%
