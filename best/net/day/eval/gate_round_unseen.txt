@@ -1,0 +1,80 @@
+# split s1 test · slice unseen · 1016 images (day 773 / night 243) · enixma geometry (centred crop, GT outside ignored, px10 at 300) · model by clock 06-18 · conf > 0.01
+
+## pooled mAP50 · paired bootstrap 1000 x over images, 95% CI
+tf_net_v10           0.552  [0.524, 0.583]
+tf_net_v12           0.563  [0.537, 0.592]
+tf_net_v13           0.586  [0.559, 0.614]
+tf_net_v12 - tf_net_v10: +0.011  [-0.003, +0.027]  P(better) 0.93  tie
+tf_net_v13 - tf_net_v10: +0.034  [+0.013, +0.055]  P(better) 1.00  BETTER
+tf_net_v13 - tf_net_v12: +0.023  [+0.005, +0.042]  P(better) 0.99  BETTER
+
+## day mAP50 · paired bootstrap 1000 x over images, 95% CI
+tf_net_v10           0.568  [0.535, 0.602]
+tf_net_v12           0.577  [0.546, 0.609]
+tf_net_v13           0.601  [0.570, 0.633]
+tf_net_v12 - tf_net_v10: +0.009  [-0.007, +0.027]  P(better) 0.86  tie
+tf_net_v13 - tf_net_v10: +0.033  [+0.010, +0.055]  P(better) 1.00  BETTER
+tf_net_v13 - tf_net_v12: +0.024  [+0.002, +0.044]  P(better) 0.98  BETTER
+
+## night mAP50 · paired bootstrap 1000 x over images, 95% CI
+tf_net_v10           0.443  [0.398, 0.499]
+tf_net_v12           0.468  [0.425, 0.534]
+tf_net_v13           0.495  [0.447, 0.561]
+tf_net_v12 - tf_net_v10: +0.026  [-0.007, +0.063]  P(better) 0.93  tie
+tf_net_v13 - tf_net_v10: +0.052  [+0.006, +0.105]  P(better) 0.99  BETTER
+tf_net_v13 - tf_net_v12: +0.027  [-0.015, +0.067]  P(better) 0.89  tie
+
+## per-class AP50 (point) · GT · DROP = >= 30 GT and > .05 below tf_net_v10
+### pooled
+class         GT          tf_net_v10          tf_net_v12          tf_net_v13
+car          995               0.634               0.655               0.643
+bike         409               0.733               0.742               0.756
+truck        247               0.475               0.466               0.540
+bus          125               0.507               0.488               0.510
+taxi         133               0.679               0.662               0.637
+pickup       709               0.539               0.558               0.569
+trailer      180               0.578               0.570               0.646
+ambulance     95               0.499               0.536               0.547
+tuktuk        65               0.513               0.600               0.642
+van          196               0.365               0.355               0.374
+### day
+class         GT          tf_net_v10          tf_net_v12          tf_net_v13
+car          853               0.635               0.652               0.638
+bike         349               0.766               0.779               0.787
+truck        215               0.536               0.517               0.581
+bus           97               0.504               0.493               0.563
+taxi         106               0.664               0.670               0.639
+pickup       632               0.560               0.575               0.591
+trailer      145               0.647               0.628               0.701
+ambulance     84               0.545               0.576               0.590
+tuktuk        34               0.427               0.515               0.532
+van          166               0.397               0.367               0.391
+### night
+class         GT          tf_net_v10          tf_net_v12          tf_net_v13
+car          142               0.661               0.696               0.704
+bike          60               0.575               0.562               0.626
+truck         32               0.174               0.210               0.344
+bus           28               0.522               0.501               0.376
+taxi          27               0.750               0.641               0.646
+pickup        77               0.399               0.426               0.412
+trailer       35               0.347               0.333               0.424
+ambulance     11               0.176               0.297               0.353
+tuktuk        31               0.611               0.696               0.761
+van           30               0.212               0.320               0.301
+
+## conf .5 · per counted GT box, by its short side at the 300 input (px) · correct / wrong class / miss
+### tf_net_v10
+ 10-15 px  GT   828  correct  15.2%  wrong   2.9%  miss  81.9%  car->pickup 11, pickup->car 7, trailer->truck 2, pickup->van 1
+ 15-25 px  GT   924  correct  45.6%  wrong  10.6%  miss  43.8%  pickup->car 27, car->pickup 17, ambulance->pickup 7, van->car 6
+ 25-40 px  GT   574  correct  56.1%  wrong  14.6%  miss  29.3%  car->pickup 20, pickup->car 15, trailer->truck 12, van->pickup 10
+   40+ px  GT   825  correct  73.9%  wrong  11.2%  miss  14.9%  car->pickup 18, trailer->truck 13, truck->trailer 9, van->pickup 8
+### tf_net_v12
+ 10-15 px  GT   828  correct  16.3%  wrong   3.4%  miss  80.3%  car->pickup 9, pickup->car 9, trailer->truck 3, van->car 2
+ 15-25 px  GT   924  correct  43.6%  wrong  10.1%  miss  46.3%  pickup->car 28, car->pickup 11, ambulance->pickup 7, van->car 6
+ 25-40 px  GT   574  correct  52.6%  wrong  13.9%  miss  33.4%  car->pickup 17, trailer->truck 13, pickup->car 12, van->pickup 9
+   40+ px  GT   825  correct  75.3%  wrong   9.9%  miss  14.8%  trailer->truck 25, pickup->car 8, bus->truck 6, van->pickup 5
+### tf_net_v13
+ 10-15 px  GT   828  correct  12.6%  wrong   2.4%  miss  85.0%  car->pickup 12, taxi->car 2, van->car 2, truck->pickup 1
+ 15-25 px  GT   924  correct  41.3%  wrong   9.1%  miss  49.6%  pickup->car 25, car->pickup 15, van->pickup 6, truck->pickup 5
+ 25-40 px  GT   574  correct  53.8%  wrong  11.5%  miss  34.7%  car->pickup 17, pickup->car 11, trailer->truck 10, van->pickup 5
+   40+ px  GT   825  correct  77.1%  wrong   8.0%  miss  14.9%  car->pickup 14, trailer->truck 11, pickup->car 7, van->pickup 5
